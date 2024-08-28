@@ -1,0 +1,14 @@
+package IntroductionToOops;
+
+class Printer {
+	public void printMessage() {
+		System.out.println("Hello, World!");
+	}
+}
+
+public class HelloWorldInOops {
+	public static void main(String[] args) {
+		Printer p = new Printer();
+		p.printMessage();
+	}
+}
