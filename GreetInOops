@@ -1,0 +1,14 @@
+package IntroductionToOops;
+
+class Greeter {
+	public void printMessage() {
+		System.out.println("Welcome to Java Programming!");
+	}
+}
+
+public class GreetInOops {
+	public static void main(String[] args) {
+		Greeter greet = new Greeter();
+		greet.printMessage();
+	}
+}
