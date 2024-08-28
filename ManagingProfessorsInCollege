@@ -1,0 +1,32 @@
+package IntroductionToOops;
+
+class Professor {
+	int id;
+	String name;
+	String department;
+	int yearsOfExperience;
+	
+	public void conductLecture() {
+		System.out.println(name + " is conducting a lecture.");
+	}
+	
+	public void provideFeedback() {
+		System.out.println(name + " is providing feedback.");
+	}
+}
+
+public class ManagingProfessorsInCollege {
+	public static void main(String[] args) {
+		Professor professor = new Professor();
+		professor.id = 1;
+		professor.name = "Harish Pathak";
+		professor.department = "Computer Science";
+		professor.yearsOfExperience = 10;
+		System.out.println("Professor ID: " +professor.id);
+		System.out.println("Professor Name: " +professor.name);
+		System.out.println("Department: " +professor.department);
+		System.out.println("Years of Experience: " +professor.yearsOfExperience);
+		professor.conductLecture();
+		professor.provideFeedback();
+	}
+}
