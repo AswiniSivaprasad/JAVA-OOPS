@@ -1,0 +1,13 @@
+package IntroductionToOops;
+
+class Notification {
+	public void send() {
+		System.out.println("Notification sent!");
+	}
+}
+
+public class EventManagementSystemAnonymousObject {
+	public static void main(String[] args) {
+		new Notification().send();    //Anonymous Object
+	}
+}
