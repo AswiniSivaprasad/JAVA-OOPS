@@ -1,0 +1,21 @@
+package KeywordSTATIC;
+
+public class StaticSymphony {
+
+	public static void main(String[] args) {
+		Configuration.print();
+	}
+}
+
+class Configuration {
+	//Declare a static variable
+	static int variable = 1024;
+	//Static block to initialize the static variable
+	static {
+		int variable = 1024;
+	}
+	//Static method to get the value of the static variable
+	static void print() {
+		System.out.println("Configuration setting is: " + variable);
+	}
+}
