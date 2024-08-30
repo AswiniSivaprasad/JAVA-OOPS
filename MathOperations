@@ -1,0 +1,47 @@
+package KeywordSTATIC;
+
+import java.util.Scanner;
+
+public class MathMachine {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter your choice");
+		String choice = sc.next();
+		System.out.println("Enter two numbers");
+		int num1 = sc.nextInt();
+		int num2 = sc.nextInt();
+		switch(choice) {
+		case "Addition" : MathOperations.add(num1, num2);
+		break;
+		case "Subtraction" : MathOperations.sub(num1, num2);
+		break;
+		case "Multiplication" : MathOperations.mul(num1, num2);
+		break;
+		case "Division" : MathOperations.div(num1, num2);
+		}
+	}
+}
+
+class MathOperations {
+	//Static method for addition
+	static void add(int num1, int num2) {
+		int res = num1 + num2;
+		System.out.println("The result of addition is: " +res);
+	}
+	//Static method for subtraction
+	static void sub(int num1, int num2) {
+		int res = num1 - num2;
+		System.out.println("The result of subtraction is: " +res);
+	}
+	//Static method for multiplication
+	static void mul(int num1, int num2) {
+		int res = num1 * num2;
+		System.out.println("The result of multiplication is: " +res);
+	}
+	//Static method for division
+	static void div(int num1, int num2) {
+		int res = num1 / num2;
+		System.out.println("The result of division is: " +res);
+	}
+}
