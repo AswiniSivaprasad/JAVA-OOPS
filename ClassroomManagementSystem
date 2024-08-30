@@ -1,0 +1,23 @@
+package KeywordSTATIC;
+
+public class ClassroomManagementSystem {
+	//Static variables
+	static int defaultAssignments;
+	static String classroomRules;
+	
+	//Static initialization block
+	static {
+		System.out.println("Setting up classroom settings...");
+		defaultAssignments = 10;  //Default number of assignments for each class
+		classroomRules = "Respect others, keep the room clean, Do your homework";
+	}
+	
+	public static void displayClassroomSettings() {
+		System.out.println("Classroom Rules: " + classroomRules);
+		System.out.println("Default Assignments: " + defaultAssignments);
+	}
+	
+	public static void main(String[] args) {
+		ClassroomManagementSystem.displayClassroomSettings();
+	}
+}
