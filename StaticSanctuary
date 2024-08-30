@@ -1,0 +1,27 @@
+package KeywordSTATIC;
+
+public class StaticSanctuary {
+
+	public static void main(String[] args) {
+		DatabaseConfig.Connection();
+	}
+}
+
+class DatabaseConfig {
+	//Declare static variables
+	static String URL;
+	static String username;
+	static String password;
+	//Static block to initialize the static variables
+	static {
+		URL = "jdbc:mysql://localhost:3306/mydatabase";
+		username = "admin";
+		password = "password123";
+	}
+	//Static methods to get the values of the static variables
+	static void Connection() {
+		System.out.println("Database URL: " +URL);
+		System.out.println("Username: " + username);
+		System.out.println("Password: " + password);
+	}
+}
