@@ -1,0 +1,30 @@
+package KeywordSTATIC;
+
+class School {
+	//Non-static variable for tracking class - specification details
+	String className;
+	
+	//Static method for general school notifications
+	public static void sendGeneralNotification() {
+		System.out.println("Remainder: School will be closed on Friday for maintenance.");
+	}
+	
+	//Non-static method for sending notifications specific to the class
+	public void sendClassNotification() {
+		System.out.println("Attention " + className + " students: Your class has to conduct morning assembly this week.");
+	}
+}
+
+public class SchoolNotificationSystem {
+	public static void main(String[] args) {
+		School.sendGeneralNotification();    //Can be called without creating an instance
+		
+		School class101 = new School();
+		class101.className = "Class 101";
+		class101.sendClassNotification(); //Specific to Class 101
+		
+		School class102 = new School();
+		class102.className = "class 102";
+		class102.sendClassNotification(); //Specific to Class 102
+	}
+}
