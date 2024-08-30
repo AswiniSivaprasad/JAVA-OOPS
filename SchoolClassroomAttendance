@@ -1,0 +1,37 @@
+package KeywordSTATIC;
+
+class Classroom {
+	//Static variable for taking total attendance across all classrooms
+	static int totalAttendance = 0;
+	
+	//Non-static variable for tracking attendance in this specific classroom
+	int classroomAttendance;
+	
+	//Mathod to mark a students attendance
+	public void markAttendance() {
+		classroomAttendance++;  //Increment attendance for this classroom
+		totalAttendance++;      //Increment total attendance across the school
+	}
+	
+	public void displayAttendance() {
+		System.out.println("Attendance in this classroom: " + classroomAttendance);
+		System.out.println("Total attendance in school: " + totalAttendance);
+	}
+}
+
+public class SchoolClassroomAttendance {
+
+	public static void main(String[] args) {
+		
+		Classroom class101 = new Classroom();
+		class101.markAttendance();
+		class101.markAttendance();
+		class101.displayAttendance();
+		
+		Classroom class102 = new Classroom();
+		class102.markAttendance();
+		class102.markAttendance();
+		class102.markAttendance();
+		class102.displayAttendance();
+	}
+}
