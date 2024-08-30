@@ -1,0 +1,24 @@
+public class StaticDemo {
+	static int x = 100;
+	
+	public static void fun1() {
+		System.out.println("Static method is executing");
+	}
+	
+	int y = 200;
+	
+	public void fun2() {
+		System.out.println("Non-static method is executing");
+	}
+}
+
+public class MainMethod {
+	public static void main(String[] args) {
+		System.out.println("x = " + StaticDemo.x);
+		StaticDemo.fun1();
+		
+		StaticDemo sd = new StaticDemo();
+		System.out.println("y = " + sd.y);
+		sd.fun2();
+	}
+}
