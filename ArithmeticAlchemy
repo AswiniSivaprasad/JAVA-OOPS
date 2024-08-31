@@ -1,0 +1,21 @@
+package KeywordSTATIC;
+
+import java.util.Scanner;
+
+public class ArithmeticAlchemy {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		int num1 = sc.nextInt();
+		int num2 = sc.nextInt();
+		System.out.println("The sum is: " + (MathOperations1.Addition(num1, num2)));
+	}
+}
+
+class MathOperations1 {
+	//Static method to calculate sum of two integers
+	static int Addition(int num1, int num2) {
+		int sum = num1 + num2;
+		return sum;
+	}
+}
