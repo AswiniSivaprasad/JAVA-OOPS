@@ -1,0 +1,32 @@
+package KeywordSTATIC;
+
+public class AppConfigRevelation {
+
+	public static void main(String[] args) {
+		AppConfig.getName();
+		AppConfig.getVersion();
+		AppConfig.getEnvironment();
+	}
+}
+
+class AppConfig {
+	//Declare static variables
+	static String name;
+	static String version;
+	static String environment;
+	//Static block to initialize the static variables
+	static {
+		name = "MyApp";
+		version = "Production";
+	}
+	//Static methods to get the values of the static variables
+	static void getName() {
+		System.out.println("Application Name: " + name);
+	}
+	static void getVersion() {
+		System.out.println("Version: " + version);
+	}
+	static void getEnvironment() {
+		System.out.println("Environment: " + environment);
+	}
+}
