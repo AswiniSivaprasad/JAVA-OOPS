@@ -1,0 +1,22 @@
+package com.kodnest.Javaoops.SUPERKeyword;
+
+class A {
+	void method() {
+		System.out.println("Method from A");
+	}
+}
+
+class B extends A {
+	void method() {
+		super.method();
+		System.out.println("Method from B");
+	}
+}
+
+public class SuperKeywordFunctionality {
+
+	public static void main(String[] args) {
+		B b = new B();
+		b.method();
+	}
+}
