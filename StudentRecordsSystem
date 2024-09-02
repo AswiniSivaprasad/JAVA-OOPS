@@ -1,0 +1,45 @@
+package CopyConstructors;
+
+class Student {
+	
+	String name;
+	int age;
+	int rollNumber;
+	
+	//Constuctor
+	public Student(String name, int age, int rollNumber) {
+		this.name = name;
+		this.age = age;
+		this.rollNumber = rollNumber;
+	}
+	//Copy Constructor
+	public Student(Student otherStudent) {
+		this.name = otherStudent.name;
+		this.age = otherStudent.age;
+		this.rollNumber = otherStudent.rollNumber;
+	}
+	
+	public void displayInfo() {
+		System.out.println("Name: " +name);
+		System.out.println("Age: " +age);
+		System.out.println("Roll Number: " +rollNumber);
+		
+	}
+}
+
+public class StudentRecordsSystem {
+
+	public static void main(String[] args) {
+		//Creating instance of Student
+		Student originalStudent = new Student("Alice", 20, 101);
+		
+		//Creating a copy instance of Student instance
+		Student copiedStudent = new Student(originalStudent);
+		
+		System.out.println("Original data");
+		originalStudent.displayInfo();
+		
+		System.out.println("Data after copying");
+		copiedStudent.displayInfo();
+	}
+}
