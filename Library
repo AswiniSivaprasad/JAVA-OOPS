@@ -1,0 +1,43 @@
+package CopyConstructors;
+
+class Book {
+	String title;
+	int pages;
+	
+	//Standard Constructor
+	public Book(String title, int pages) {
+		this.title = title;
+		this.pages = pages;
+	}
+	
+	//Copy constuctor
+	public Book(Book another) {
+		this.title = another.title;
+		this.pages = another.pages;
+	}
+	
+	//Method to display book details
+	public void display() {
+		System.out.println("Book: " + title + ", Pages: " + pages);
+	}
+}
+
+public class Library {
+
+	public static void main(String[] args) {
+		
+		//Create a book object
+		Book originalBook = new Book("Java Fundamentals", 300);
+		originalBook.display();
+		
+		//Create a copy of the Book
+		Book copiedBook = new Book(originalBook);
+		copiedBook.display();
+		
+		//Modifying the copy to show that it does not affect the original
+		copiedBook.pages = 350; //Assume setter methods or direct access for simplicity
+		System.out.println("After modifying the copied book:");
+		copiedBook.display();
+		originalBook.display();
+	}
+}
