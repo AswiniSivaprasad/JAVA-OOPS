@@ -1,0 +1,40 @@
+package CopyConstructors;
+
+class Employee {
+	
+	String name;
+	int id;
+	String department;
+	//Constructor
+	public Employee(String name, int id, String department) {
+		this.name = name;
+		this.id = id;
+		this.department = department;
+	}
+	//Copy Constructor
+	public Employee(Employee otherEmployee) {
+		this.name = otherEmployee.name;
+		this.id = otherEmployee.id;
+		this.department = otherEmployee.department;
+	}
+	
+	public void displayDetails() {
+		System.out.println("Name: " +name);
+		System.out.println("ID: " +id);
+		System.out.println("Department: " +department);
+	}
+}
+
+public class EmployeeProfileSystem {
+
+	public static void main(String[] args) {
+		
+		Employee originalEmployee = new Employee("John Smith", 456, "Marketing");
+		System.out.println("Original Employee Details");
+		originalEmployee.displayDetails();
+		
+		Employee copiedEmployee = new Employee(originalEmployee);
+		System.out.println("Copied Employee Details");
+		copiedEmployee.displayDetails();
+	}
+}
