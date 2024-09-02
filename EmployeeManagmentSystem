@@ -1,0 +1,46 @@
+package com.kodnest.Javaopps.InstanceBlock;
+
+class Employee {
+	//Instance Variables
+	String name;
+	int age;
+	String designation;
+	
+	//Instance Block
+	{
+		name = "Unknown";
+		age = 18;
+		designation = "Intern";
+	}
+	
+	//Default Constructor
+	public Employee() {
+		
+	}
+	
+	//Parameterized Constructor
+	public Employee(String name, int age, String designation) {
+		this.name = name;
+		this.age = age;
+		this.designation = designation;
+	}
+	
+	//Method to display
+	public void displayDetails() {
+		System.out.println("Employee Name: " +name);
+		System.out.println("Employee Age: " +age);
+		System.out.println("Employee Designation: " +designation);
+	}
+}
+
+public class EmployeeManagmentSystem {
+
+	public static void main(String[] args) {
+		
+		Employee emp1 = new Employee();
+		emp1.displayDetails();
+		
+		Employee emp2 = new Employee("Alice", 25, "Software Engineer");
+		emp2.displayDetails();
+	}
+}
