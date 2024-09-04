@@ -1,0 +1,33 @@
+//Define Package - Package1
+package com.library.data;
+
+public class Book {
+	String title;
+	String author;
+	
+	//Constructor
+	public Book(String title, String author) {
+		this.title = title;
+		this.author = author;
+	}
+	
+	public void displayInfo() {
+		System.out.println("Title: " + title + ", Author: " + author);
+	}
+}
+
+//Package 2
+package com.library.app;
+
+//Import the Book class from the data package
+import com.library.data.Book;
+
+public class LibraryManagement {
+
+	public static void main(String[] args) {
+		Book myBook = new Book("1984", "George Orwell");
+		myBook.displayInfo();
+	}
+}
+
+o/p - Title: 1984, Author: George Orwell
