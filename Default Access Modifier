@@ -1,0 +1,20 @@
+Default Access Modifier (No Modifier) : When no access modifier is specified, Java uses the default access level, which allows the member to be accessible to only within the same package.
+
+package com.library.data;
+
+public class DatabaseConnector {
+	void connect() {
+		System.out.println("Database connected");
+	}
+}
+
+package com.library.app;   
+
+import com.library.data.DatabaseConnector;
+
+public class DataManager {
+	public static void main(String[] args) {
+		DatabaseConnector db = new DatabaseConnector();
+	  //db.connect(); (Compiler error : connect() is not visible)
+	}
+}
