@@ -1,0 +1,20 @@
+Public Access Modifier : The public access modifier is the most premissive, it allows classes, methods or fields to be accessed from other class or package in Java.
+
+package com.library.utils;       
+
+public class Printer {
+	public void print(String message) {
+		System.out.println(message);
+	}
+}
+
+package com.library.app;         
+
+import com.library.utils.Printer;
+
+public class LibraryApp {
+	public static void main(String[] args) {
+		Printer printer = new Printer();
+		printer.print("Hello from LibraryApp!");
+	}
+}
