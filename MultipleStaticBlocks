@@ -1,0 +1,26 @@
+package com.kodnest.Javaoops.ProgramFlow;
+
+public class MultipleStaticBlocks {
+	
+	//Static Variable - 1
+	static int staticVar1 = 5;
+	
+	//Static Block - 1
+	static {
+		System.out.println("First static block executed. staticVar1 = " + staticVar1);
+		staticVar1 = 10;
+	}
+	
+	//Static Variable - 2
+	static int staticVar2 = 20;
+	
+	//Static Block - 2
+	static {
+		System.out.println("Second static block executed. staticVar2 = " + staticVar2);
+		staticVar2 = 30;
+	}
+	
+	public static void main(String[] args) {
+		System.out.println("Main method executed. staticVar1 = " + staticVar1 + ", staticVar2 = " + staticVar2);
+	}
+}
