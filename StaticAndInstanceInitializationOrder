@@ -1,0 +1,30 @@
+package com.kodnest.Javaoops.ProgramFlow;
+
+public class StaticAndInstanceInitialization {
+
+	static int staticVar = 10;    //Static variable
+	int instanceVar = 20;         //Instance variable
+	
+	//Static Block
+	static {
+		System.out.println("Static block executed");
+		staticVar = 30;
+	}
+	
+	//Instance Block
+	{
+		System.out.println("Instance block executed");
+		instanceVar = 40;
+	}
+	
+	public StaticAndInstanceInitialization() {
+		System.out.println("Constructor executed");
+	}
+	
+	public static void main(String[] args) {
+		System.out.println("Main method started");
+		System.out.println("Static var before object creation: " + staticVar);
+		StaticAndInstanceInitialization obj = new StaticAndInstanceInitialization();
+		System.out.println("Intance var after object creation: " + obj.instanceVar);
+	}
+}
