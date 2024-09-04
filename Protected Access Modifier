@@ -1,0 +1,28 @@
+Protected Access Modifier : The protected access modifier allows access to the class member from within the same package or subclasses in different packages
+
+package com.library.utils; 
+
+public class Device {
+	protected void activate() {
+		System.out.println("Device activated");
+	}
+}
+
+package com.library.app;   
+
+import com.library.utils.Device;
+
+public class SpecialDevice extends Device {
+	public void start() {
+		activate(); //Accessing protected method
+	}
+}
+
+package com.library.app;    //Protected Modifier
+
+public class TestDevice {
+	public static void main(String[] args) {
+		SpecialDevice sd = new SpecialDevice();
+		sd.start();
+	}
+}
