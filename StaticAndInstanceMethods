@@ -1,0 +1,32 @@
+package com.kodnest.Javaoops.ProgramFlow;
+
+public class StaticAndInstanceMethods {
+	
+	//Static variable
+	static int staticVar = 5;
+	
+	//Static Block
+	static {
+		staticVar = 10;
+	}
+	
+	//Instance Variable
+	int instanceVar = 20;
+	
+	//Static method
+	public static void staticMethod() {
+		System.out.println("Static method executed. staticVar = " + staticVar);
+	}
+	
+	//Instance method
+	public void instanceMethod() {
+		System.out.println("Instance method executed. instanceVar = " + instanceVar);
+	}
+	
+	//Main method
+	public static void main(String[] args) {
+		StaticAndInstanceMethods.staticMethod();
+		StaticAndInstanceMethods obj = new StaticAndInstanceMethods();
+		obj.instanceMethod();
+	}
+}
