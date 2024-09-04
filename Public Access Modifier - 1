@@ -1,0 +1,17 @@
+package com.library.data;
+
+public class Book {
+	public String title = "1984";
+}
+
+package com.library.app;
+
+import com.library.data.Book;
+
+public class LibraryApps {
+
+	public static void main(String[] args) {
+		Book myBook = new Book();
+		System.out.println("Title: " + myBook.title);
+	}
+}
