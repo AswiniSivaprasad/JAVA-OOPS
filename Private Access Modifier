@@ -1,0 +1,25 @@
+Private Access Modifier : The private access modifier is the most restrictive and allows the members to be connected only within the same class.
+
+package com.library.utils;  
+
+public class SecurePrinter {
+	private void log(String message) {
+		System.out.println("Logging: " +message);
+	}
+	
+	public void publicPrint(String message) {
+		log(message);
+	}
+}
+
+package com.library.app;
+
+import com.library.utils.SecurePrinter;
+
+public class TestPrinter {
+	public static void main(String[] args) {
+		SecurePrinter printer = new SecurePrinter();
+		printer.publicPrint("Test message");
+	//printer.log("Test message");  (Compiler error: log() has private access in SecurePrinter)
+	}
+}
