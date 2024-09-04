@@ -1,0 +1,29 @@
+package com.kodnest.Javaoops.ProgramFlow;
+
+public class StaticBlockExecutionOrder {
+
+	//Static Variable
+	static int staticVar = 5;
+	
+	//Static Block
+	static {
+		System.out.println("Static block executed. staticVar = " + staticVar);
+	}
+	
+	//Instance Variable
+	int instanceVar = 20;
+	
+	{
+		System.out.println("Instance block executed. instanceVar = " + instanceVar);
+	}
+	
+	//Constructor
+	public StaticBlockExecutionOrder () {
+		System.out.println("Constructor executed. instanceVar = " + instanceVar);
+	}
+	
+	public static void main(String[] args) {
+		System.out.println("Main method started");
+		StaticBlockExecutionOrder obj = new StaticBlockExecutionOrder();
+	}
+}
